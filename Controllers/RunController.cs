@@ -18,7 +18,7 @@ namespace run_job.Controllers
         }
 
         // GET api/Run/5
-        [HttpGet("{token}/{jobid}")]
+        [HttpGet("{token}/{jobid}"), HttpPost("{token}/{jobid}")]
         public string Get(string token, string jobid)
         {
             string host = $"http://localhost:4440/api/26/job/{jobid}/run";
